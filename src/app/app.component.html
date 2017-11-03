@@ -1,0 +1,20 @@
+<h1>Hard coded Movie List</h1>
+<div *ngFor="let message of movieListService.movies">
+    <mat-card>
+        <mat-card-title align="center">
+            <h1> {{message.movieName}}</h1>
+        </mat-card-title>
+        <mat-card-content align="center">
+            Actror==>{{message.actor}}
+        </mat-card-content>
+        <img mat-card-image src='{{message.movieLink}}'>               
+    </mat-card>
+</div>
+<h1>This data is coming from Mongodb</h1>
+<div *ngFor="let favMoive of movieListService.favMovies">
+    <mat-card>
+        <mat-card-title align="center">
+            {{favMoive.movieName}}
+        </mat-card-title>
+    </mat-card>
+</div>
